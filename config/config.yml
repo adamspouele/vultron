@@ -1,0 +1,10 @@
+
+organization: Meshectares
+
+docker:
+    address: unix:///var/run/docker.sock  # local docker instance address
+
+cosmoverse: 
+    pidpath: /var/run/cosmoverse-containers # cosmoverse containers pid
+    blueprint: 
+        default: blueprint.yml  # default blueprint name

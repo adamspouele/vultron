@@ -1,0 +1,18 @@
+
+version: 1
+
+services:
+  - name: webapp
+    containers:
+      - name: Hipache
+        image: stackbrew/hipache
+        ports: 
+          - extern: 80
+            intern: 80 
+          - publicPort: 6379
+            containerPort: 6379 
+      - name: WebApp
+        image: benschw/go-webapp
+        deps: Hipache
+        env: 
+          host: webapp.local
